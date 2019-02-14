@@ -48,10 +48,8 @@ our @ENTRIES = (
 This module provides FRM exam calendar using the L<Calendar::Dates> interface.
 
 
-=head1 SEE ALSO
+=head1 prepend:SEE ALSO
 
 L<https://www.garp.org/#!/frm/program-exams>
 
 L<https://en.wikipedia.org/wiki/Financial_risk_management>
-
-L<Calendar::Dates>
