@@ -12,12 +12,41 @@ use Role::Tiny::With;
 with 'Calendar::DatesRoles::DataPreparer::CalendarVar::FromData';
 with 'Calendar::DatesRoles::DataUser::CalendarVar';
 
+sub filter_entry {
+    my ($self, $entry, $params) = @_;
+
+    if (defined(my $mon = $params->{exam_month})) {
+        $mon eq 'may' || $mon eq 'nov' or die "Invalid exam_month, please specify either may/nov";
+        return 0 unless grep { /\A$mon/ } @{ $entry->{tags} // [] };
+    }
+    # exam_level has no effect currently, each exam date is relevant to both
+    # levels/parts.
+    1;
+}
+
 1;
 # ABSTRACT: FRM exam calendar
 
 =head1 DESCRIPTION
 
 This module provides FRM exam calendar using the L<Calendar::Dates> interface.
+
+
+=head1 PARAMETERS
+
+=head2 exam_month
+
+Can be used to select dates related to a certain exam month only. Value is
+either C<may> or C<nov>. Example:
+
+ $entries = Calendar::Dates::FRM->get_entries({exam_month=>'nov'}, 2019);
+
+=head2 exam_level
+
+Can be used to select dates related to a certain exam level (part) only. Value
+is either 1, 2.
+
+ $entries = Calendar::Dates::FRM->get_entries({exam_level=>2}, 2019);
 
 
 =head1 prepend:SEE ALSO
