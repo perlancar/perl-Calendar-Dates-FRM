@@ -27,6 +27,8 @@ sub filter_entry {
 1;
 # ABSTRACT: FRM exam calendar
 
+=for Pod::Coverage ^(filter_entry)$
+
 =head1 DESCRIPTION
 
 This module provides FRM exam calendar using the L<Calendar::Dates> interface.
