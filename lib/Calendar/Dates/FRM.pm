@@ -86,3 +86,26 @@ __DATA__
 2019-11-01;Admission tickets released;nov2019exam
 2019-11-16;Exam day;nov2019exam
 2020-01-02;Exam results sent via email;nov2019exam
+
+# may2020exam
+2019-12-01;Early registration opened;may2020exam
+2020-01-31;Early registration closed;may2020exam
+2020-02-01;Standard registration opened;may2020exam
+2020-02-29;Standard registration closed;may2020exam
+2020-03-01;Late registration opened;may2020exam
+2020-04-15;Late registration closed;may2020exam
+2020-04-15;Defer deadline;may2020exam
+2020-05-01;Admission tickets released;may2020exam
+2020-05-16;Exam day;may2020exam
+2020-07-01;Exam results sent via email;may2020exam
+
+# nov2020exam
+2020-05-01;Early registration opened;nov2020exam
+2020-07-31;Early registration closed;nov2020exam
+2020-08-01;Standard registration opened;nov2020exam
+2020-08-31;Standard registration closed;nov2020exam
+2020-09-01;Late registration opened;nov2020exam
+2020-10-15;Late registration closed;nov2020exam
+2020-10-15;Defer deadline;nov2020exam
+2020-11-01;Admission tickets released;nov2020exam
+2020-11-21;Exam day;nov2020exam
